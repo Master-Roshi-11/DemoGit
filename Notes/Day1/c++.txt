@@ -1,0 +1,126 @@
+What is C programming lang?
+1. Middle level language
+2. Procedure oriented language
+2. Statically typed language
+let a=;
+
+Basic programming constructs about any prrogramming language-
+
+tokens-
+
+keywords- reserved/ predefined words
+identifiers - names given to variable/ function (user defined/given names)
+constant- creating fixed value varibles which should not be changed once created
+literal -value assigned to varible of type
+
+int x=4;
+char c= 'A';
+
+
+operators-
+
+43+67=
+==  >/<
+
+
+modifiers/ storage classes-  static - static/extern/auto/register
+character set - .,/,*,alpha numeric value, \b,\t,\n
+
+
+conditional statements - if-else
+control statements - loops -for(;;)/while(condition)/do{}while();/
+data types-to represent any value and store it we need to use data type for creating varibles
+variables- to store values in memory for further use - we create varibles
+declaration -
+defination -
+
+syntax - 
+data-type name-for-var ;   //varible declaration
+float  f ;  //var. declaration
+
+f=4.5;   //initialization
+
+float f=4.5;  // var initialization at the time of declaration
+
+
+function - small snipet of code which represent some functionality independently
+return type- the return value type in function
+
+there ar 3 parts in function - 
+function declaraation/ defination/call
+
+return_type  func_name(list of arg. DT);  - fun. declaration
+return_type  function-name (arg. list (arg. DT var_name,... )){
+
+} --// fun. defination
+
+fun call- 
+func_name(values list,....);
+
+
+;  //null statement
+
+
+
+
+Data types
+Array
+Structure -  it allows us to create user defined DT - nothing but storing diffrent types of values together
+
+ex- student/employee/patient/bank account/ 
+
+
+student-- name/roll/add/email/marks of subjects/ no. subjects/percentage/ grade
+
+syntax- 
+struct structure_name {
+	DT var;  list
+};
+
+struct Student{
+	int roll;
+	char name[15];
+	char subject[5][15];
+	int marks[5];
+	float percentage;
+	char grade;
+};
+
+struct Student s1;   //creation of variable of structure type
+
+-- access members/ properties of structure using . operator
+
+s1.roll=9;
+
+printf("%d",s1.roll);
+
+
+Mathematics
+English
+Hindi
+Science
+History
+
+
+
+
+Pointer- derived DT which are used for storing address of any memory location(varible/function)
+
+syntax -
+
+DT * ptr_name= & DT variable;
+
+
+int x=9;
+
+
+int *  ptr=  x;  // wrong 
+
+int *  ptr=  &x;  //address assigned to pointer
+
+printf("%d",ptr);   //
+
+
+
+
+

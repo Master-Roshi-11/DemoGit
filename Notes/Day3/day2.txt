@@ -1,0 +1,256 @@
+cout<<x;
+
+std::cout<<x;
+
+
+
+int x=8;
+
+Reference variable- creating another name/ alias to a variable
+
+Syntax- 
+DT & new_var_name=old var_name;
+
+int & r=x;
+
+
+cout<<r;  //8
+
+r++;
+
+cout<<x;//9
+
+in C-
+
+
+call by value - we pass value to function and catch values in function
+
+call by refrence -- done by using address and pointer
+
+
+
+In C++ -
+
+call by value - we pass value to function and catch values in function
+
+call by address--we pass address and catch by pointer // done by using address and pointer
+
+call by refrence- we pass variable as value and catch by reference variable
+
+
+#include<>
+
+func. declaration   //optional part
+main(){
+
+show("Hello");  //function  //error
+
+}
+
+void show(char str [10] ){
+
+}
+
+
+#include<>
+
+void show(char str [10] ){
+
+}
+
+main(){
+
+show("Hello");  //function  //error
+
+}
+
+class circle
+{
+// 2 things 1. Data members - variables written as a property of entity inside class
+   2. Member Functions  - behavior / functions of that entity
+
+	int r;
+	//float area,circum;
+
+	1. accept details for data member which are requiered
+	2. display all details of entity
+	3. finding out area
+	4. finding out circumference
+};
+
+1. creating a class doesn't mean memory is allocated.
+2. until and unless we create object of class memory will not be allocated for class
+
+class  Circle{
+	int r;
+	float area, circum;
+
+	void acceptDetails();
+	void displayDetails();
+	void area();
+	void circumference();
+};
+
+class_name var_name;   // creating object  (variable of class type)
+
+
+Circle c1,c2,c3; // 12 bytes each
+
+once the object created memory will be allocated for them as per data members
+
+
+struct Student{
+	int roll;
+	char name[10];
+}
+
+sizeof(struct Student);  4+10 =14 
+
+
+
+while creating class we write functions inside it
+but how to define functions with class-
+
+1. define member function inside class
+	no need of writing declaration in this case
+	these functions will be treated inline functions ()
+
+2. out side the class 
+	we declare function inside class and define outside the class with class name and :: 
+(scope resolution) operator
+
+
+#include<iostream>
+using namespace std;
+class Date{
+    int day,mon,yr;
+    public:
+    	void getDetails(){
+    		cout<<"\nEnter Day, Month & year :\t";
+    		cin>>day>>mon>>yr;
+		}
+    void display();
+};
+void Date::display(){
+    cout<<day<<"-"<<mon<<"-"<<yr;
+}
+class Student{
+	int roll;
+	char name[10];
+	Date dob;  //part-of relation / has-a relation /containment
+	public:
+		void acceptDetails()
+		{
+			cout<<"\nEnter Roll no., Name :\t";
+			cin>>roll>>name;
+			dob.getDetails();
+		}
+		void display();
+};
+void Student::display(){
+	cout<<"\nRoll No - "<<roll;
+	cout<<"\nName - "<<name;
+	cout<<"\nDate of Birth - ";
+	dob.display();
+}
+int main(){
+	Student obj;
+	obj.acceptDetails();	
+    obj.display();
+	return 0;
+}
+
+
+
+--c++ provides 2 constructor definations bydefault 
+1. default constructor
+2. copy constructor
+
+but when programer will write parameterized constructor
+and will think that c++'s default constructor will work by default
+then --- this will not work
+
+because -
+
+
+A o1(2,3);   // parameterized Constructor
+
+A o2(o1);  //passing object as pearameter is called copy constructor
+
+A o3 = o1;  //call to copy constructor
+
+
+
+
+DMA-
+in c++ we have operators for DMA
+1. New  - memory allocation
+2. delete - deallocating memory
+
+syntax - 
+DT * ptr=new DT()/[];
+
+int * ptr= new int(8);
+
+(value)- to assign value in memory;
+[size]- to create memory for no. of variable as given as size in bracket
+- for crating array size memory
+
+delete(ptr); 
+ptr=NULL// very imp line  
+
+//if we skip above line will create ptr as dangling pointer
+
+
+//in side function to refere an object for which this 
+function is called we use this pointer
+        
+
+if we want to access members of structure / class using it's 
+variable/object we use . operator
+
+//if we want to access members of structure/ class through pointer of that 
+structure /class we use -> operator
+
+A obj;
+A *p=obj;
+
+obj.x  //dot operator used with object
+
+p->x  // -> operator used with pointer of object
+
+
+this is a pointer of current object for which fun. is called
+so inside that function we use this pointer 
+
+
+
+polymorphisum - diffrent objects behaiv diffrently for same message
+
+2 types- compile time & runtime
+compile time-
+- 1. function overloading
+- definning multiple function (behaviors) with same name and diffrent arguments
+
+add(int,int){    }
+add(int,int,int){   }
+add(float,float){   }
+add(float,int){    }
+
+//execution of overloaded function is done by compiler through
+name mangling
+
+
+
+-2. operator overloading
+
+Runtime-
+- virtual function (function overriding)
+
+
+
+
+
+
+
+
